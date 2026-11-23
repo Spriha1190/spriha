@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <script>
+    try {
+      document.querySelector('meta[name="color-scheme"]').content = localStorage.getItem('spriha-theme') === 'light' ? 'light' : 'dark';
+    } catch {}
+  </script>
+  <title>About, Credentials &amp; Research — Spriha Ghosh Puja</title>
+  <meta name="description" content="Academic timeline, double GPA 5.00 honors, certifications, workshops, extracurricular activities, research interests, languages, and creative media by Spriha Ghosh Puja.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-logo magnetic-btn" href="index.html">
+        <span class="site-logo-monogram" aria-hidden="true">
+          <svg class="sg-emblem-svg" viewBox="0 0 48 48" width="40" height="40">
+            <defs>
+              <linearGradient id="hdrLogoGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#A61B55"/>
+                <stop offset="55%" stop-color="#D9468F"/>
+                <stop offset="100%" stop-color="#C28D50"/>
+              </linearGradient>
+            </defs>
+            <g class="sg-orbit-ring">
+              <circle cx="24" cy="24" r="22" fill="none" stroke="url(#hdrLogoGrad)" stroke-width="1.2" stroke-dasharray="6 5" opacity="0.75"/>
+            </g>
+            <g class="sg-spark-dot">
+              <circle cx="24" cy="2" r="2.2" fill="#E6BC82"/>
+            </g>
+            <rect x="6" y="6" width="36" height="36" rx="11" fill="url(#hdrLogoGrad)"/>
+            <text x="24" y="30" text-anchor="middle" fill="#FFFFFF" font-family="'Cormorant Garamond', Georgia, serif" font-style="italic" font-weight="700" font-size="18">SG</text>
+          </svg>
+        </span>
+        <span class="site-logo-text">
+          <span class="site-logo-name">Spriha Ghosh</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <button
+          class="menu-button"
+          type="button"
+          popovertarget="site-menu"
+          popovertargetaction="toggle"
+          aria-controls="site-menu"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="4" y1="7" x2="20" y2="7"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="17" x2="20" y2="17"/>
+          </svg>
+          <span>Menu</span>
+        </button>
+
+        <ul id="site-menu" class="site-menu" popover="auto">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cv.html">CV</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="icon-pill-btn" data-open-cmd aria-label="Open command palette">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <span>Search</span>
+          <kbd class="kbd-badge">Ctrl+K</kbd>
+        </button>
+
+        <button type="button" class="icon-pill-btn" data-theme-toggle aria-label="Toggle color theme">
+          <span class="theme-option-to-dark">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+            <span class="visually-hidden">Switch to dark theme</span>
+            <span>Dark</span>
+          </span>
+          <span class="theme-option-to-light">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+            </svg>
+            <span class="visually-hidden">Switch to light theme</span>
+            <span>Light</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-banner">
+      <div class="container">
+        <p class="eyebrow">Academic &amp; Creative Dossier</p>
+        <h1>Education, Credentials &amp; <span class="editorial-italic">Creative Life</span></h1>
+        <p class="section-subtitle">
+          Complete academic background, research interests, certifications, achievements, workshops, community activities, programming profiles, and visual arts.
+        </p>
+      </div>
+    </section>
+
+    <!-- Story & Portrait Split -->
+    <section class="section">
+      <div class="container hero-grid">
+        <div class="card spotlight-card">
+          <p class="eyebrow">01 · Profile</p>
+          <h2 class="section-title" style="margin-block-end:0.85rem;">Analytical Discipline, <span class="editorial-italic">Human Warmth</span></h2>
+          <p style="margin-block-end:0.9rem;color:var(--muted);">
+            I am <strong>Spriha Ghosh Puja</strong>, a Computer Science &amp; Engineering undergraduate at
+            <strong>Daffodil International University (DIU)</strong> based in Ashulia, Savar, Dhaka with hometown roots in Natore, Rajshahi.
+          </p>
+          <p style="margin-block-end:1.1rem;color:var(--muted);">
+            Whether architecting object-oriented management applications, simulating 2D evolutionary life, or preparing structured reports in Microsoft Excel, Word, and PowerPoint, I combine methodical engineering with aesthetic care.
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.65rem;">
+            <a class="btn btn-primary btn-sm magnetic-btn" href="cv.html">View CV</a>
+            <a class="btn btn-secondary btn-sm magnetic-btn" href="projects.html">Explore 7 Projects</a>
+          </div>
+        </div>
+
+        <div class="portrait-stage">
+          <svg class="portrait-ring-svg" viewBox="0 0 240 240" aria-hidden="true">
+            <circle cx="120" cy="120" r="113" fill="none" stroke="currentColor" stroke-width="1.25" stroke-dasharray="3 7"/>
+          </svg>
+          <div class="portrait-arch">
+            <div class="portrait-arch-inner">
+              <img
+                src="assets/images/spriha-portrait.png"
+                alt="Portrait of Spriha Ghosh Puja in a plum and rani-rose saree"
+                width="768"
+                height="1024"
+                fetchpriority="high"
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Timeline & Qualifications Table -->
+    <section class="section-tight" id="education">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">02 · Education</p>
+            <h2 class="section-title">Academic <span class="editorial-italic">Timeline &amp; Results</span></h2>
+          </div>
+        </div>
+
+        <div class="timeline" style="margin-block-end:2rem;">
+          <article class="timeline-item spotlight-card">
+            <p class="timeline-year">2023 – Present · Dhaka</p>
+            <h3>B.Sc. in Computer Science &amp; Engineering (CSE)</h3>
+            <p style="color:var(--muted);margin-block-start:0.35rem;">
+              Daffodil International University (DIU) — Coursework spanning Object-Oriented Programming, Computer Graphics Design, Digital Logic Design, Computer Networks, and Web Systems.
+            </p>
+          </article>
+          <article class="timeline-item spotlight-card">
+            <p class="timeline-year">2021 · Rajshahi Board · GPA 5.00 / 5.00</p>
+            <h3>Higher Secondary Certificate (HSC) — Science</h3>
+            <p style="color:var(--muted);margin-block-start:0.35rem;">
+              N.S. Govt. College, Natore — Achieved maximum GPA 5.00 out of 5.00 in Science.
+            </p>
+          </article>
+          <article class="timeline-item spotlight-card">
+            <p class="timeline-year">2019 · Rajshahi Board · GPA 5.00 / 5.00</p>
+            <h3>Secondary School Certificate (SSC) — Science</h3>
+            <p style="color:var(--muted);margin-block-start:0.35rem;">
+              Natore Govt. Girls' High School, Natore — Achieved maximum GPA 5.00 out of 5.00 in Science.
+            </p>
+          </article>
+        </div>
+
+        <div tabindex="0" role="region" aria-labelledby="about-edu-caption" class="table-wrapper">
+          <table class="data-table table-education">
+            <caption id="about-edu-caption">Verified Educational Qualifications</caption>
+            <thead>
+              <tr>
+                <th>Degree / Certificate</th>
+                <th>Institute</th>
+                <th>Board / University</th>
+                <th>Passing Year</th>
+                <th>Result / Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">B.Sc. in CSE (Science &amp; Engineering)</th>
+                <td>Daffodil International University</td>
+                <td>UGC Accredited University</td>
+                <td>2023 – Ongoing</td>
+                <td><span class="tag tag-accent">Active Undergraduate</span></td>
+              </tr>
+              <tr>
+                <th scope="row">HSC (Science Group)</th>
+                <td>N.S. Govt. College, Natore</td>
+                <td>Rajshahi</td>
+                <td>2021</td>
+                <td><span class="tag tag-gold">GPA 5.00 out of 5.00</span></td>
+              </tr>
+              <tr>
+                <th scope="row">SSC (Science Group)</th>
+                <td>Natore Govt. Girls' High School, Natore</td>
+                <td>Rajshahi</td>
+                <td>2019</td>
+                <td><span class="tag tag-gold">GPA 5.00 out of 5.00</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications, Achievements & Workshops -->
+    <section class="section" id="certifications-achievements">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">03 · Credentials &amp; Honors</p>
+            <h2 class="section-title">Certifications, Achievements &amp; <span class="editorial-italic">Workshops</span></h2>
+          </div>
+        </div>
+
+        <div class="credential-grid">
+          <article class="credential-card spotlight-card">
+            <div class="credential-meta">
+              <span class="tag tag-gold">Achievement</span>
+              <span class="hint">2019 &amp; 2021</span>
+            </div>
+            <h3>Double GPA 5.00 Academic Distinction</h3>
+            <p style="color:var(--muted);font-size:var(--text-sm);">
+              Consistent top-tier Science results across both SSC (Natore Govt. Girls' High School) and HSC (N.S. Govt. College, Natore).
+            </p>
+          </article>
+
+          <article class="credential-card spotlight-card">
+            <div class="credential-meta">
+              <span class="tag tag-accent">Certification</span>
+              <span class="hint">Technical Training</span>
+            </div>
+            <h3>Modern Web &amp; Responsive Design</h3>
+            <p style="color:var(--muted);font-size:var(--text-sm);">
+              Structured mastery of Semantic HTML5, CSS Grid/Container Queries, Accessible Forms, and Interactive ES6 JavaScript.
+            </p>
+          </article>
+
+          <article class="credential-card spotlight-card">
+            <div class="credential-meta">
+              <span class="tag tag-accent">Certification</span>
+              <span class="hint">Productivity</span>
+            </div>
+            <h3>Microsoft Office Suite Proficiency</h3>
+            <p style="color:var(--muted);font-size:var(--text-sm);">
+              Hands-on proficiency creating analytical Excel workbooks, formal Word technical reports, and PowerPoint slide decks.
+            </p>
+          </article>
+
+          <article class="credential-card spotlight-card">
+            <div class="credential-meta">
+              <span class="tag">Workshops &amp; Training</span>
+              <span class="hint">Seminars</span>
+            </div>
+            <h3>DIU Computing &amp; Architecture Labs</h3>
+            <p style="color:var(--muted);font-size:var(--text-sm);">
+              Participated in university technical workshops covering OOP System Modeling, Digital Logic Circuits, and VLAN Network Design.
+            </p>
+          </article>
+
+          <article class="credential-card spotlight-card">
+            <div class="credential-meta">
+              <span class="tag">Workshops &amp; Training</span>
+              <span class="hint">Bootcamp</span>
+            </div>
+            <h3>Problem Solving &amp; Git Workflows</h3>
+            <p style="color:var(--muted);font-size:var(--text-sm);">
+              Attended peer-led coding sessions focusing on C++/Java algorithmic thinking, debugging practices, and GitHub version control.
+            </p>
+          </article>
+
+          <article class="credential-card spotlight-card">
+            <div class="credential-meta">
+              <span class="tag tag-gold">Co-Curricular</span>
+              <span class="hint">Community</span>
+            </div>
+            <h3>Campus Service &amp; Blood Donation</h3>
+            <p style="color:var(--muted);font-size:var(--text-sm);">
+              Active volunteer participant supporting campus events, tech club initiatives, and emergency blood donor coordination.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Language Proficiency Table & Extracurricular Leadership -->
+    <section class="section">
+      <div class="container split-two" style="align-items:start;">
+        <div>
+          <p class="eyebrow">04 · Languages</p>
+          <h2 class="section-title" style="margin-block-end:1.15rem;">Language <span class="editorial-italic">Proficiency</span></h2>
+
+          <div tabindex="0" role="region" aria-labelledby="lang-table-caption" class="table-wrapper">
+            <table class="data-table table-languages">
+              <caption id="lang-table-caption">Bilingual Reading, Writing, Listening &amp; Speaking Skills</caption>
+              <thead>
+                <tr>
+                  <th>Language</th>
+                  <th>Reading</th>
+                  <th>Writing</th>
+                  <th>Listening</th>
+                  <th>Speaking</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Bengali</th>
+                  <td><span class="tag tag-gold">Excellent</span></td>
+                  <td><span class="tag tag-gold">Excellent</span></td>
+                  <td><span class="tag tag-gold">Excellent</span></td>
+                  <td><span class="tag tag-gold">Excellent</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">English</th>
+                  <td><span class="tag tag-accent">Excellent</span></td>
+                  <td><span class="tag">Good</span></td>
+                  <td><span class="tag">Good</span></td>
+                  <td><span class="tag">Good</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div>
+          <p class="eyebrow">05 · Extracurricular Activities</p>
+          <h2 class="section-title" style="margin-block-end:1.15rem;">Campus &amp; <span class="editorial-italic">Community Service</span></h2>
+          <div style="display:flex;flex-direction:column;gap:0.9rem;">
+            <article class="card spotlight-card" style="padding:1.15rem 1.35rem;">
+              <h3>Community Service (Volunteer)</h3>
+              <p class="hint" style="margin-block-start:0.25rem;font-size:var(--text-sm);">
+                Supporting student outreach initiatives, event organization, and collaborative community assistance programs.
+              </p>
+            </article>
+            <article class="card spotlight-card" style="padding:1.15rem 1.35rem;">
+              <h3>Computer &amp; Technology Club</h3>
+              <p class="hint" style="margin-block-start:0.25rem;font-size:var(--text-sm);">
+                Active engagement in technical peer learning, software design discussions, and university computing showcases.
+              </p>
+            </article>
+            <article class="card spotlight-card" style="padding:1.15rem 1.35rem;">
+              <h3>Blood Donation Club</h3>
+              <p class="hint" style="margin-block-start:0.25rem;font-size:var(--text-sm);">
+                Helping coordinate awareness and urgent blood donor mobilization across the university community.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Creative Media & Hobbies Showcase -->
+    <section class="section" id="creative-media">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">06 · Creative Pursuits &amp; Media</p>
+            <h2 class="section-title">Visual Arts, Music &amp; <span class="editorial-italic">Exploration</span></h2>
+          </div>
+          <p class="section-subtitle">Click any artwork card below to inspect it in full view.</p>
+        </div>
+
+        <div class="bento-media-grid" style="margin-block-end:1.75rem;">
+          <article class="media-card spotlight-card">
+            <div class="media-card-img-wrap">
+              <img src="assets/images/media-photography.svg" alt="Editorial illustration of a classic rangefinder camera bathed in warm golden-hour botanical shadows" width="800" height="600" loading="lazy">
+            </div>
+            <div class="media-card-body">
+              <h3>Photography</h3>
+              <p class="hint">Light, Architecture &amp; Quiet Moments</p>
+              <button type="button" class="btn btn-secondary btn-sm media-card-btn" data-media-id="photography">View Artwork</button>
+            </div>
+          </article>
+
+          <article class="media-card spotlight-card">
+            <div class="media-card-img-wrap">
+              <img src="assets/images/media-drawing.svg" alt="Editorial illustration of an open botanical sketchbook with fine-line ink floral art and brass pen" width="800" height="600" loading="lazy">
+            </div>
+            <div class="media-card-body">
+              <h3>Drawing &amp; Sketching</h3>
+              <p class="hint">Botanical Studies &amp; Visual Balance</p>
+              <button type="button" class="btn btn-secondary btn-sm media-card-btn" data-media-id="drawing">View Artwork</button>
+            </div>
+          </article>
+
+          <article class="media-card spotlight-card">
+            <div class="media-card-img-wrap">
+              <img src="assets/images/media-crafting.svg" alt="Editorial illustration of artisan handmade paper floral origami with silk ribbon and gold thread" width="800" height="600" loading="lazy">
+            </div>
+            <div class="media-card-body">
+              <h3>Crafting</h3>
+              <p class="hint">Tactile Paper Art &amp; Detail Work</p>
+              <button type="button" class="btn btn-secondary btn-sm media-card-btn" data-media-id="crafting">View Artwork</button>
+            </div>
+          </article>
+
+          <article class="media-card spotlight-card">
+            <div class="media-card-img-wrap">
+              <img src="assets/images/media-singing.svg" alt="Editorial illustration of a vintage studio condenser microphone framed by golden acoustic sound waves" width="800" height="600" loading="lazy">
+            </div>
+            <div class="media-card-body">
+              <h3>Singing</h3>
+              <p class="hint">Vocal Expression &amp; Melody</p>
+              <button type="button" class="btn btn-secondary btn-sm media-card-btn" data-media-id="singing">View Artwork</button>
+            </div>
+          </article>
+
+          <article class="media-card spotlight-card">
+            <div class="media-card-img-wrap">
+              <img src="assets/images/media-travelling.svg" alt="Editorial illustration of misty hills and a serene river winding beneath a rose-gold dawn sky" width="800" height="600" loading="lazy">
+            </div>
+            <div class="media-card-body">
+              <h3>Travelling</h3>
+              <p class="hint">From Natore to Dhaka &amp; Beyond</p>
+              <button type="button" class="btn btn-secondary btn-sm media-card-btn" data-media-id="travelling">View Artwork</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="audio-studio-card">
+          <div>
+            <p class="eyebrow" style="margin-block-end:0.35rem;">Acoustic Motif</p>
+            <h3 style="font-size:1.1rem;margin-block-end:0.25rem;">Ambient Harp Loop — Singing &amp; Focus Track</h3>
+            <p class="hint">Gentle 8-second acoustic arpeggio inspired by calm melodic practice.</p>
+          </div>
+          <audio controls preload="metadata" src="assets/audio/ambient-melody.wav">
+            Your browser does not support the audio player.
+          </audio>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2 class="footer-heading">Spriha Ghosh Puja</h2>
+          <p class="section-subtitle" style="font-size:var(--text-sm);">
+            CSE Undergraduate at Daffodil International University crafting clean software systems and accessible web interfaces.
+          </p>
+        </div>
+        <div>
+          <h2 class="footer-heading">Navigation</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About &amp; Credentials</a></li>
+            <li><a href="projects.html">All 7 Projects</a></li>
+            <li><a href="contact.html">Contact &amp; Reference</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-heading">Profiles &amp; CV</h2>
+          <ul class="footer-links">
+            <li><a href="cv.html">Curriculum Vitae (CV)</a></li>
+            <li><a href="https://github.com/Spriha1190" target="_blank" rel="noopener noreferrer">GitHub (@Spriha1190)</a></li>
+            <li><a href="https://www.linkedin.com/in/spriha-ghosh-puja-1907b3451" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></li>
+            <li><a href="mailto:puja23105101302@gmail.com">puja23105101302@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Spriha Ghosh Puja · Dhaka, Bangladesh</span>
+        <a href="#main-content">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Media Lightbox Dialog -->
+  <dialog id="media-dialog" class="app-dialog" closedby="any" aria-labelledby="media-dialog-title">
+    <div class="dialog-head">
+      <div>
+        <p id="media-dialog-subtitle" class="eyebrow" style="margin-block-end:0.2rem;">Creative Gallery</p>
+        <h2 id="media-dialog-title" style="font-size:var(--text-xl);">Artwork</h2>
+      </div>
+      <form method="dialog">
+        <button type="submit" class="dialog-close-btn" aria-label="Close media dialog">&times;</button>
+      </form>
+    </div>
+    <div class="dialog-body">
+      <img id="media-dialog-img" src="assets/images/media-photography.svg" alt="" style="width:100%;border-radius:var(--radius-md);margin-block-end:1rem;">
+      <p id="media-dialog-caption" style="color:var(--muted);"></p>
+    </div>
+  </dialog>
+
+  <!-- Command Palette Dialog -->
+  <dialog id="cmd-dialog" class="app-dialog cmd-dialog" closedby="any" aria-label="Quick navigation and actions">
+    <div class="cmd-search-wrap">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <circle cx="11" cy="11" r="7"/>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input id="cmd-input" class="cmd-input" type="search" placeholder="Jump to page, CV, research, or toggle theme..." aria-label="Search commands">
+      <form method="dialog">
+        <button type="submit" class="btn btn-secondary btn-sm">Esc</button>
+      </form>
+    </div>
+    <ul id="cmd-list" class="cmd-list" role="listbox" aria-label="Available commands"></ul>
+  </dialog>
+
+  <script src="js/data.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/motion.js"></script>
+</body>
+</html>

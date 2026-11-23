@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-labelledby="title-draw">
+  <title id="title-draw">Editorial illustration of an open botanical sketchbook with fine-line drawing pen and ink bottle</title>
+  <defs>
+    <linearGradient id="deskBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FAF7F4"/>
+      <stop offset="100%" stop-color="#EDE0E5"/>
+    </linearGradient>
+    <linearGradient id="pageGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFDFB"/>
+      <stop offset="48%" stop-color="#F6ECEF"/>
+      <stop offset="52%" stop-color="#FFFDFB"/>
+      <stop offset="100%" stop-color="#FCF7F4"/>
+    </linearGradient>
+    <linearGradient id="goldNib" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F2D09B"/>
+      <stop offset="100%" stop-color="#A6723B"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#deskBg)"/>
+  <!-- Sketchbook cover shadow -->
+  <rect x="108" y="98" width="584" height="404" rx="18" fill="#1E141B" opacity="0.13"/>
+  <rect x="100" y="88" width="584" height="404" rx="16" fill="#2A1924"/>
+  <!-- Pages -->
+  <rect x="116" y="102" width="552" height="376" rx="10" fill="url(#pageGrad)"/>
+  <line x1="392" y1="102" x2="392" y2="478" stroke="#D7C3CC" stroke-width="3"/>
+  <!-- Left Page Botanical Watercolor & Line Study -->
+  <circle cx="252" cy="285" r="82" fill="#FCE7F0" opacity="0.75"/>
+  <circle cx="278" cy="245" r="46" fill="#F9EFE1" opacity="0.85"/>
+  <path d="M245,405 Q255,310 250,210" fill="none" stroke="#1E141B" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M250,320 C215,300 198,275 205,252 C230,256 248,276 250,320 Z" fill="#355E4B" opacity="0.82"/>
+  <path d="M250,290 C288,272 308,248 302,225 C276,228 256,252 250,290 Z" fill="#355E4B" opacity="0.72"/>
+  <circle cx="248" cy="202" r="28" fill="#A61B55" opacity="0.88"/>
+  <circle cx="238" cy="195" r="16" fill="#F472B6" opacity="0.65"/>
+  <circle cx="250" cy="205" r="6" fill="#E6BC82"/>
+  <!-- Right Page Geometric Sketch Lines -->
+  <circle cx="530" cy="255" r="78" fill="none" stroke="#A61B55" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <polygon points="530,192 586,288 474,288" fill="none" stroke="#B38147" stroke-width="2"/>
+  <line x1="452" y1="365" x2="606" y2="365" stroke="#CEB7C2" stroke-width="2"/>
+  <line x1="452" y1="392" x2="575" y2="392" stroke="#CEB7C2" stroke-width="2"/>
+  <line x1="452" y1="418" x2="545" y2="418" stroke="#CEB7C2" stroke-width="2"/>
+  <!-- Ink Bottle -->
+  <rect x="612" y="395" width="76" height="82" rx="14" fill="#241620" stroke="#E6BC82" stroke-width="2"/>
+  <rect x="630" y="372" width="40" height="24" rx="6" fill="url(#goldNib)"/>
+  <circle cx="650" cy="436" r="16" fill="#A61B55" opacity="0.85"/>
+  <!-- Brass Fountain Pen -->
+  <g transform="rotate(-26 520 440)">
+    <rect x="405" y="428" width="235" height="20" rx="10" fill="#1E141B"/>
+    <rect x="515" y="428" width="12" height="20" fill="url(#goldNib)"/>
+    <polygon points="405,431 366,438 405,445" fill="url(#goldNib)"/>
+    <circle cx="385" cy="438" r="2.5" fill="#1E141B"/>
+  </g>
+</svg>

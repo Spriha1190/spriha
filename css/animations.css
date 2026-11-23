@@ -1,0 +1,325 @@
+/* ==========================================================================
+   Signature Motion System:
+   Animated SG Emblem, Kinetic Hero Name & Signature Flourish, Mouse Spotlight,
+   3D Micro-Tilt, Magnetic Buttons, Levitating Arch Rings & Ambient Cursor Aura
+   ========================================================================== */
+
+/* ---------- 1. Animated SG Monogram Emblem ---------- */
+.site-logo-monogram {
+  position: relative;
+  display: grid;
+  place-items: center;
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+  border-radius: 0.78rem;
+  background: transparent;
+  box-shadow: none;
+  flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sg-emblem-svg {
+  inline-size: 100%;
+  block-size: 100%;
+  overflow: visible;
+}
+
+.sg-orbit-ring {
+  transform-origin: 24px 24px;
+}
+
+.sg-spark-dot {
+  transform-origin: 24px 24px;
+}
+
+.site-logo:hover .site-logo-monogram {
+  transform: scale(1.08) rotate(-3deg);
+  filter: drop-shadow(0 6px 14px color-mix(in srgb, var(--accent) 45%, transparent));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sg-orbit-ring {
+    animation: sg-orbit 14s linear infinite;
+  }
+  .sg-spark-dot {
+    animation: sg-orbit 7s linear infinite reverse;
+  }
+  .site-logo:hover .sg-orbit-ring {
+    animation-duration: 5s;
+  }
+
+  @keyframes sg-orbit {
+    to { transform: rotate(360deg); }
+  }
+}
+
+/* ---------- 2. Animated Hero Name & Self-Drawing Signature Flourish ---------- */
+.hero-name-line {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0 0.24em;
+}
+
+.hero-name-word {
+  display: inline-block;
+  background: linear-gradient(
+    115deg,
+    var(--ink) 0%,
+    var(--ink) 30%,
+    var(--accent) 48%,
+    var(--gold) 58%,
+    var(--ink) 74%,
+    var(--ink) 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.signature-flourish-wrap {
+  display: block;
+  inline-size: min(100%, 19rem);
+  block-size: 1.35rem;
+  margin-block: 0.35rem 0.55rem;
+  color: var(--accent);
+}
+
+.signature-flourish-path {
+  stroke-dasharray: 420;
+  stroke-dashoffset: 0;
+}
+
+.signature-star {
+  transform-origin: 282px 11px;
+}
+
+/* Kinetic Role Rotator */
+.kinetic-role-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-block-size: 1.5em;
+}
+
+.kinetic-role-text {
+  display: inline-block;
+  transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.kinetic-role-text.is-swapping {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-name-word {
+    animation:
+      word-rise 0.65s cubic-bezier(0.22, 1, 0.36, 1) both,
+      name-shimmer 7.5s ease-in-out infinite alternate;
+  }
+  .hero-name-word:nth-child(2) {
+    animation-delay: 0.08s, 0.4s;
+  }
+  .hero-name-word:nth-child(3) {
+    animation-delay: 0.16s, 0.8s;
+  }
+
+  @keyframes word-rise {
+    from {
+      opacity: 0.2;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes name-shimmer {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
+
+  .signature-flourish-path {
+    stroke-dashoffset: 420;
+    animation: draw-flourish 1.35s cubic-bezier(0.22, 1, 0.36, 1) 0.25s forwards;
+  }
+
+  @keyframes draw-flourish {
+    to { stroke-dashoffset: 0; }
+  }
+
+  .signature-star {
+    animation: star-pulse 3.6s ease-in-out infinite;
+  }
+
+  @keyframes star-pulse {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.85; }
+    50% { transform: scale(1.22) rotate(45deg); opacity: 1; }
+  }
+}
+
+/* ---------- 3. Levitating Arch Portrait & Dual Counter-Rotating Rings ---------- */
+.portrait-ring-inner {
+  position: absolute;
+  inset: 0.65rem;
+  inline-size: calc(100% - 1.3rem);
+  block-size: calc(100% - 1.3rem);
+  color: var(--accent);
+  opacity: 0.38;
+  pointer-events: none;
+}
+
+.portrait-arch-inner {
+  position: relative;
+}
+
+.portrait-arch-inner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle 180px at var(--px, 50%) var(--py, 30%),
+    rgba(255, 240, 246, 0.22),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.portrait-stage:hover .portrait-arch-inner::after {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .portrait-arch {
+    animation: arch-float 6.5s ease-in-out infinite;
+  }
+
+  .portrait-ring-inner {
+    animation: gentle-spin 42s linear infinite reverse;
+  }
+
+  @keyframes arch-float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-7px); }
+  }
+}
+
+/* ---------- 4. Mouse-Tracking Spotlight, 3D Tilt & Magnetic Pull ---------- */
+.spotlight-card {
+  position: relative;
+  overflow: hidden;
+  --mx: -260px;
+  --my: -260px;
+  transition:
+    transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.spotlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    360px circle at var(--mx) var(--my),
+    color-mix(in srgb, var(--accent) 13%, transparent),
+    color-mix(in srgb, var(--gold) 6%, transparent) 42%,
+    transparent 72%
+  );
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 0;
+}
+
+.spotlight-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .spotlight-card:hover::before {
+    opacity: 1;
+  }
+
+  .tilt-card:hover {
+    transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(-5px);
+  }
+
+  .magnetic-btn {
+    transform: translate3d(var(--mag-x, 0px), var(--mag-y, 0px), 0);
+  }
+}
+
+/* ---------- 5. Refined Ambient Cursor Glow Ring (Desktop Fine Pointer) ---------- */
+.cursor-aura,
+.cursor-dot {
+  display: none;
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  pointer-events: none;
+  z-index: 950;
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: opacity 0.25s ease, width 0.22s ease, height 0.22s ease, border-color 0.22s ease, background-color 0.22s ease;
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .cursor-aura {
+    display: block;
+    inline-size: 2.25rem;
+    block-size: 2.25rem;
+    border-radius: 50%;
+    border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent);
+    background: color-mix(in srgb, var(--accent) 6%, transparent);
+    margin-inline-start: -1.125rem;
+    margin-block-start: -1.125rem;
+  }
+
+  .cursor-dot {
+    display: block;
+    inline-size: 0.42rem;
+    block-size: 0.42rem;
+    border-radius: 50%;
+    background: var(--gold);
+    margin-inline-start: -0.21rem;
+    margin-block-start: -0.21rem;
+  }
+
+  .cursor-aura.is-visible,
+  .cursor-dot.is-visible {
+    opacity: 1;
+  }
+
+  .cursor-aura.is-interactive {
+    inline-size: 3.25rem;
+    block-size: 3.25rem;
+    margin-inline-start: -1.625rem;
+    margin-block-start: -1.625rem;
+    border-color: var(--gold);
+    background: color-mix(in srgb, var(--gold) 10%, transparent);
+  }
+}
+
+/* ---------- 6. Reduced Motion Safety Guard ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .sg-orbit-ring,
+  .sg-spark-dot,
+  .hero-name-word,
+  .signature-flourish-path,
+  .signature-star,
+  .portrait-arch,
+  .portrait-ring-inner,
+  .portrait-ring-svg {
+    animation: none !important;
+  }
+
+  .signature-flourish-path {
+    stroke-dashoffset: 0;
+  }
+}

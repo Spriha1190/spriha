@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-labelledby="title-travel">
+  <title id="title-travel">Editorial illustration of misty hills and a serene river winding beneath a rose-gold dawn sky</title>
+  <defs>
+    <linearGradient id="dawnSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F9E7EE"/>
+      <stop offset="55%" stop-color="#FCEFE1"/>
+      <stop offset="100%" stop-color="#FAF7F4"/>
+    </linearGradient>
+    <linearGradient id="riverGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E6BC82" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#F9A8D4" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#FAF7F4" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#dawnSky)"/>
+  <!-- Rising Sun -->
+  <circle cx="405" cy="215" r="76" fill="#E6BC82" opacity="0.45"/>
+  <circle cx="405" cy="215" r="52" fill="#F2D09B" opacity="0.8"/>
+  <!-- Distant Plum Ridge -->
+  <path d="M0,305 Q175,215 350,275 T720,245 L800,260 L800,400 L0,400 Z" fill="#594853" opacity="0.48"/>
+  <!-- Mid Botanical Sage Hills -->
+  <path d="M0,345 Q210,275 430,335 T800,310 L800,460 L0,460 Z" fill="#355E4B" opacity="0.72"/>
+  <!-- Foreground Hill & Winding River -->
+  <path d="M0,395 Q245,355 480,415 T800,385 L800,600 L0,600 Z" fill="#241620"/>
+  <path d="M415,392 C360,425 460,465 340,515 C240,555 210,585 170,600 L420,600 C465,565 510,520 455,465 C415,430 435,408 448,394 Z" fill="url(#riverGrad)"/>
+  <!-- Minimalist Boat Silhouette -->
+  <path d="M352,482 L416,482 L404,494 L362,494 Z" fill="#A61B55"/>
+  <line x1="384" y1="482" x2="384" y2="452" stroke="#FAF7F4" stroke-width="2"/>
+  <polygon points="385,452 406,476 385,476" fill="#FCE7F0" opacity="0.9"/>
+  <!-- Delicate Horizon Birds -->
+  <path d="M235,148 Q245,140 255,148 Q265,140 275,148" fill="none" stroke="#594853" stroke-width="2" stroke-linecap="round"/>
+  <path d="M290,168 Q297,162 304,168 Q311,162 318,168" fill="none" stroke="#594853" stroke-width="2" stroke-linecap="round"/>
+</svg>

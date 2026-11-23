@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-labelledby="title-sing">
+  <title id="title-sing">Editorial illustration of a vintage studio microphone with golden acoustic waves and petals</title>
+  <defs>
+    <linearGradient id="plumStage" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1E141B"/>
+      <stop offset="55%" stop-color="#341B2B"/>
+      <stop offset="100%" stop-color="#160E15"/>
+    </linearGradient>
+    <radialGradient id="stageGlow" cx="50%" cy="42%" r="48%">
+      <stop offset="0%" stop-color="#F472B6" stop-opacity="0.45"/>
+      <stop offset="55%" stop-color="#B38147" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#1E141B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="micGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F7DCA8"/>
+      <stop offset="50%" stop-color="#C89353"/>
+      <stop offset="100%" stop-color="#8B5E2B"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#plumStage)"/>
+  <rect width="800" height="600" fill="url(#stageGlow)"/>
+  <!-- Concentric Acoustic Sound Rings -->
+  <circle cx="400" cy="245" r="145" fill="none" stroke="#E6BC82" stroke-opacity="0.25" stroke-width="1.5"/>
+  <circle cx="400" cy="245" r="205" fill="none" stroke="#F472B6" stroke-opacity="0.22" stroke-width="1.5" stroke-dasharray="8 8"/>
+  <circle cx="400" cy="245" r="265" fill="none" stroke="#E6BC82" stroke-opacity="0.14" stroke-width="1.5"/>
+  <!-- Acoustic Wave Bars -->
+  <g fill="#F472B6" opacity="0.45">
+    <rect x="120" y="220" width="8" height="50" rx="4"/>
+    <rect x="144" y="195" width="8" height="100" rx="4"/>
+    <rect x="168" y="210" width="8" height="70" rx="4"/>
+    <rect x="192" y="180" width="8" height="130" rx="4"/>
+    <rect x="600" y="185" width="8" height="120" rx="4"/>
+    <rect x="624" y="212" width="8" height="66" rx="4"/>
+    <rect x="648" y="195" width="8" height="100" rx="4"/>
+    <rect x="672" y="224" width="8" height="42" rx="4"/>
+  </g>
+  <!-- Microphone Capsule -->
+  <rect x="348" y="128" width="104" height="170" rx="52" fill="url(#micGold)"/>
+  <line x1="358" y1="185" x2="442" y2="185" stroke="#241620" stroke-width="3" opacity="0.45"/>
+  <line x1="352" y1="210" x2="448" y2="210" stroke="#241620" stroke-width="3" opacity="0.45"/>
+  <line x1="356" y1="235" x2="444" y2="235" stroke="#241620" stroke-width="3" opacity="0.45"/>
+  <path d="M326,232 C326,302 474,302 474,232" fill="none" stroke="#E6BC82" stroke-width="10" stroke-linecap="round"/>
+  <rect x="392" y="305" width="16" height="165" fill="url(#micGold)"/>
+  <ellipse cx="400" cy="472" rx="92" ry="18" fill="#C89353"/>
+  <!-- Floating Petals & Bokeh -->
+  <circle cx="240" cy="145" r="10" fill="#F9A8D4" opacity="0.55"/>
+  <circle cx="565" cy="130" r="14" fill="#E6BC82" opacity="0.45"/>
+  <ellipse cx="268" cy="420" rx="16" ry="9" transform="rotate(-24 268 420)" fill="#A61B55" opacity="0.75"/>
+  <ellipse cx="545" cy="398" rx="14" ry="8" transform="rotate(30 545 398)" fill="#F472B6" opacity="0.6"/>
+</svg>

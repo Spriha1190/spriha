@@ -1,0 +1,182 @@
+/* ==========================================================================
+   Design Tokens — Atelier Ivory & Rani Rose / Midnight Velvet & Rose Gold
+   Art-directed around Spriha Ghosh Puja's portrait photography.
+   ========================================================================== */
+
+:root {
+  /* Default to Midnight Velvet dark theme; toggle switches to light via meta tag */
+  color-scheme: dark;
+
+  /* Raw Palette Tokens — Light Mode (Editorial Daylight) */
+  --bg-light: #FAF7F4;
+  --surface-light: #FFFFFF;
+  --surface-tint-light: #F4EBEE;
+  --surface-elevated-light: #FCF9FA;
+  --ink-light: #1E141B;
+  --muted-light: #594853;
+  --border-light: #E6D8DE;
+  --border-strong-light: #CEB7C2;
+  --accent-light: #A61B55;
+  --accent-hover-light: #881344;
+  --accent-soft-light: #FCE7F0;
+  --accent-ink-light: #FFFFFF;
+  --gold-light: #B38147;
+  --gold-soft-light: #F9EFE1;
+  --sage-light: #355E4B;
+  --sage-soft-light: #E7F3EC;
+  --error-light: #B91C1C;
+  --error-soft-light: #FEF2F2;
+  --shadow-light: 0 10px 30px -12px rgba(30, 20, 27, 0.10), 0 2px 8px -2px rgba(30, 20, 27, 0.05);
+  --shadow-lg-light: 0 24px 56px -16px rgba(30, 20, 27, 0.16);
+  --header-bg-light: rgba(250, 247, 244, 0.86);
+
+  /* Raw Palette Tokens — Dark Mode (Midnight Velvet) */
+  --bg-dark: #120D11;
+  --surface-dark: #1C141A;
+  --surface-tint-dark: #261C24;
+  --surface-elevated-dark: #2E222B;
+  --ink-dark: #F7EFF3;
+  --muted-dark: #C8B6C1;
+  --border-dark: #382A34;
+  --border-strong-dark: #543E4E;
+  --accent-dark: #F472B6;
+  --accent-hover-dark: #F9A8D4;
+  --accent-soft-dark: #3B1A2B;
+  --accent-ink-dark: #1B0913;
+  --gold-dark: #E6BC82;
+  --gold-soft-dark: #322619;
+  --sage-dark: #6EE7B7;
+  --sage-soft-dark: #163026;
+  --error-dark: #FCA5A5;
+  --error-soft-dark: #3F161B;
+  --shadow-dark: 0 12px 34px -10px rgba(0, 0, 0, 0.55), 0 2px 10px -2px rgba(0, 0, 0, 0.40);
+  --shadow-lg-dark: 0 28px 64px -12px rgba(0, 0, 0, 0.72);
+  --header-bg-dark: rgba(18, 13, 17, 0.84);
+
+  /* Default Tokens (Dark fallback matching default dark color-scheme) */
+  --bg: var(--bg-dark);
+  --surface: var(--surface-dark);
+  --surface-tint: var(--surface-tint-dark);
+  --surface-elevated: var(--surface-elevated-dark);
+  --ink: var(--ink-dark);
+  --muted: var(--muted-dark);
+  --border: var(--border-dark);
+  --border-strong: var(--border-strong-dark);
+  --accent: var(--accent-dark);
+  --accent-hover: var(--accent-hover-dark);
+  --accent-soft: var(--accent-soft-dark);
+  --accent-ink: var(--accent-ink-dark);
+  --gold: var(--gold-dark);
+  --gold-soft: var(--gold-soft-dark);
+  --sage: var(--sage-dark);
+  --sage-soft: var(--sage-soft-dark);
+  --error: var(--error-dark);
+  --error-soft: var(--error-soft-dark);
+  --shadow: var(--shadow-dark);
+  --shadow-lg: var(--shadow-lg-dark);
+  --header-bg: var(--header-bg-dark);
+
+  /* Typography Scale */
+  --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Consolas, monospace;
+
+  --text-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);
+  --text-sm: clamp(0.875rem, 0.84rem + 0.18vw, 0.9375rem);
+  --text-base: clamp(1rem, 0.96rem + 0.22vw, 1.0625rem);
+  --text-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.25rem);
+  --text-xl: clamp(1.35rem, 1.2rem + 0.7vw, 1.65rem);
+  --text-2xl: clamp(1.75rem, 1.45rem + 1.4vw, 2.35rem);
+  --text-3xl: clamp(2.25rem, 1.75rem + 2.4vw, 3.35rem);
+  --text-hero: clamp(2.55rem, 1.95rem + 3.1vw, 4.1rem);
+
+  /* Radii & Spacing */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.35rem;
+  --radius-xl: 2rem;
+  --radius-pill: 999px;
+  --container-max: 74rem;
+
+  /* Native UI Adaptation */
+  accent-color: var(--accent);
+  scrollbar-color: var(--border-strong) transparent;
+}
+
+/* Reflect meta[name="color-scheme"] override back into CSS color-scheme property */
+:root:has(> head > meta[name="color-scheme"][content="dark"]) {
+  color-scheme: dark;
+}
+
+:root:has(> head > meta[name="color-scheme"][content="light"]) {
+  color-scheme: light;
+}
+
+/* Fallback for browsers without light-dark(): explicit light override */
+@supports not (color: light-dark(white, black)) {
+  :root:has(> head > meta[name="color-scheme"][content="light"]) {
+    --bg: var(--bg-light);
+    --surface: var(--surface-light);
+    --surface-tint: var(--surface-tint-light);
+    --surface-elevated: var(--surface-elevated-light);
+    --ink: var(--ink-light);
+    --muted: var(--muted-light);
+    --border: var(--border-light);
+    --border-strong: var(--border-strong-light);
+    --accent: var(--accent-light);
+    --accent-hover: var(--accent-hover-light);
+    --accent-soft: var(--accent-soft-light);
+    --accent-ink: var(--accent-ink-light);
+    --gold: var(--gold-light);
+    --gold-soft: var(--gold-soft-light);
+    --sage: var(--sage-light);
+    --sage-soft: var(--sage-soft-light);
+    --error: var(--error-light);
+    --error-soft: var(--error-soft-light);
+    --shadow: var(--shadow-light);
+    --shadow-lg: var(--shadow-lg-light);
+    --header-bg: var(--header-bg-light);
+  }
+}
+
+/* Modern light-dark() enhancement */
+@supports (color: light-dark(white, black)) {
+  :root {
+    --bg: light-dark(var(--bg-light), var(--bg-dark));
+    --surface: light-dark(var(--surface-light), var(--surface-dark));
+    --surface-tint: light-dark(var(--surface-tint-light), var(--surface-tint-dark));
+    --surface-elevated: light-dark(var(--surface-elevated-light), var(--surface-elevated-dark));
+    --ink: light-dark(var(--ink-light), var(--ink-dark));
+    --muted: light-dark(var(--muted-light), var(--muted-dark));
+    --border: light-dark(var(--border-light), var(--border-dark));
+    --border-strong: light-dark(var(--border-strong-light), var(--border-strong-dark));
+    --accent: light-dark(var(--accent-light), var(--accent-dark));
+    --accent-hover: light-dark(var(--accent-hover-light), var(--accent-hover-dark));
+    --accent-soft: light-dark(var(--accent-soft-light), var(--accent-soft-dark));
+    --accent-ink: light-dark(var(--accent-ink-light), var(--accent-ink-dark));
+    --gold: light-dark(var(--gold-light), var(--gold-dark));
+    --gold-soft: light-dark(var(--gold-soft-light), var(--gold-soft-dark));
+    --sage: light-dark(var(--sage-light), var(--sage-dark));
+    --sage-soft: light-dark(var(--sage-soft-light), var(--sage-soft-dark));
+    --error: light-dark(var(--error-light), var(--error-dark));
+    --error-soft: light-dark(var(--error-soft-light), var(--error-soft-dark));
+    --shadow: light-dark(var(--shadow-light), var(--shadow-dark));
+    --shadow-lg: light-dark(var(--shadow-lg-light), var(--shadow-lg-dark));
+    --header-bg: light-dark(var(--header-bg-light), var(--header-bg-dark));
+  }
+}
+
+/* WebKit fallback for scrollbar-color */
+@supports not (scrollbar-color: auto) {
+  :root::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  :root::-webkit-scrollbar-thumb {
+    background: var(--border-strong);
+    border-radius: 999px;
+  }
+  :root::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
